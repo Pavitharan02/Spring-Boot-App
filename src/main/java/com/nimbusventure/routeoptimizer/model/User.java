@@ -18,17 +18,19 @@ public class User implements Serializable {
     private String role;
     private String phone_no;
     private String imageUrl;
+    private String user_code;
 
 
     public User() {}
 
-    public User(String user_name, String password, String email, String role, String phone_no, String imageUrl) {
+    public User(String user_name, String password, String email, String role, String phone_no, String imageUrl, String user_code) {
         this.user_name = user_name;
         this.password = password;
         this.email = email;
         this.role = role;
         this.phone_no = phone_no;
         this.imageUrl = imageUrl;
+        this.user_code = user_code;
     }
 
     public Long getUser_id() {
@@ -87,6 +89,13 @@ public class User implements Serializable {
         this.imageUrl = imageUrl;
     }
 
+    public String getUser_code() {
+        return user_code;
+    }
+
+    public void setUser_code(String user_code) {
+        this.user_code = user_code;
+    }
 
     @Override
     public String toString() {
@@ -98,6 +107,7 @@ public class User implements Serializable {
                 ", role='" + role + '\'' +
                 ", phone_no='" + phone_no + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", user_code='" + user_code + '\'' +
                 '}';
     }
 }

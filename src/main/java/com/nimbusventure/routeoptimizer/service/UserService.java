@@ -18,7 +18,7 @@ public class UserService {
     }
 
     public User addUser(User user){
-        user.setUser_id(UUID.randomUUID().toString());
+        user.setUser_code(UUID.randomUUID().toString());
         return userRepo.save(user);
     }
 
@@ -30,7 +30,7 @@ public class UserService {
         return userRepo.save(user);
     }
 
-    public User deleteUser(User user){
+    public void deleteUser(Long user_id){
         userRepo.deleteUserByID(user_id);
     }
 }
