@@ -35,9 +35,9 @@ public class UserResource {
         return new ResponseEntity<>(updateUser, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{user_id}")
-    public ResponseEntity<?> deleteUser(@PathVariable("user_id") Long user_id){
-        userService.deleteUser(user_id);
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable("id") Long id){
+        userService.deleteUser(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
